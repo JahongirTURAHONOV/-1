@@ -1,28 +1,28 @@
-#включить "pch.ч"
+#include "pch.h"
 #include <iostream>
 #include <cmath>
-#включить ч>
-использование пространства имен std;
+#include <Windows.h>
+using namespace std;
 
 int main()
 {
- SetConsoleCP (1251);
- SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 
- двойной a, b, t, z;
- cout << "Введите числа a и b" << endl;
- cin >>> a >>>>>>> b;
- если (a >= b)
- z = 1-2 * cos (a) * sin(b));
- остальное если (a )
- z = pow (abs (a*a-b * b), (1.0 / 2));
- if (z )
- t = pow ((z + a * a * b), 1.0 / 3);
- еще если (z == b)
- t = 1-log (z) + cos(a*a * b);
- еще
- t = 1 / cos(z*a);
- cout < < "t =" < < t < < endl < < "z =" < < z <;
- система ("пауза");
- возврат 0;
+	double a, b, t, z;
+	cout << "Введите числа a и b" << endl;
+	cin >> a >> b;
+	if (a >= b)
+		z = 1 - 2 * cos(a)*sin(b);
+	else if (a < b)
+		z = pow(abs(a*a - b * b), (1.0 / 2));
+	if (z < b)
+		t = pow((z + a * a*b), 1.0 / 3);
+	else if (z == b)
+		t = 1 - log(z) + cos(a*a*b);
+	else
+		t = 1 / cos(z*a);
+	cout << "t = " << t << endl << "z = " << z << endl;
+	system("pause");
+	return 0;
 }
