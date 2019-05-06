@@ -1,41 +1,41 @@
-#включить "pch.ч"
+#include "pch.h"
 #include <iostream>
 #include <string>
-#include " windows.ч"
+#include "windows.h"
 #include <cstdio>
-использование пространства имен std;
+using namespace std;
 
-class library { //Объявляемсам класс
-общественный:
- string style;//Объявляем переменные
- автор строки;
- заголовок строки;
- int год;
- int цена;
+class library { //Объявляемсам класс 
+public:
+	string style;//Объявляем переменные
+	string author;
+	string title;
+	int year;
+	int price;
 
- string *members;//объявление переменных
+	string *members;//объявление переменных 
 
- int n;
+	int n;
 
- void set () / / ввод
+	void set()//ввод
 	{
- cout << "Введите количество книг:" << endl;
- cin >>> n;
- members = новая строка[n];
+		cout << "Введите количество книг:" << endl;
+		cin >> n;
+		members = new string[n];
 
- for (int i = 0; i )
+		for (int i = 0; i < n; i++)
 		{
- cout << "Введите жанр_ФИО_название_год книги №" << i + 1 << ":" << endl;
- cin > > > участники[i];
+			cout << "Введите жанр_ФИО_название_год книги №" << i + 1 << ":" << endl;
+			cin >> members[i];
 
 		}
 	}
- void show()//вывод
+	void show()//вывод
 	{
- cout < < endl << "-----------------------------------------------------" <;
- for (int i = 0; i )
+		cout << endl << "-----------------------------------------------------" << endl;
+		for (int i = 0; i < n; i++)
 		{
- cout << "книга №" << i + 1 << ":" << members[i] << endl;
+			cout << "книга №" << i + 1 << ":" << members[i] << endl;
 
 		}
 
@@ -45,14 +45,14 @@ class library { //Объявляемсам класс
 
 int main()
 {
- SetConsoleCP (1251);
- SetConsoleOutputCP(1251);
- setlocale (LC_ALL, " Rus");
- библиотека x;
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	setlocale(LC_ALL, "Rus");
+	library x;
 
- x.набор();
- x.показать();
+	x.set();
+	x.show();
 
- система ("пауза");
- возврат 0;
+	system("pause");
+	return 0;
 }
