@@ -1,48 +1,48 @@
-#включить "pch.ч"
+#include "pch.h"
 #include <iostream>
 #include <string>
-#include " windows.ч"
+#include "windows.h"
 #include <cstdio>
-использование пространства имен std;
+using namespace std;
 
 class book { //Объявляемсам класс
-общественный:
- string style;//Объявляем переменные
- автор строки;
- заголовок строки;
- int год;
- int цена;
+public:
+	string style;//Объявляем переменные 
+	string author;
+	string title;
+	int year;
+	int price;
 
- void set () / / ввод
+	void set()//ввод
 	{
- cout << "Какой жанр?
- getline (Cin, style);
- cout << "Имя и фамилия автора:";
- getline (cin, автор);
- cout << "Название:";
- getline (cin, title);
- cout << "Год:";
- Cin >>> год;
- cout << "Цена:";
- cin > > > цена;
- cout << "---------------------------------------" <;
+		cout << "Какой жанр?";
+		getline(cin, style);
+		cout << "Имя и фамилия автора:";
+		getline(cin, author);
+		cout << "Название:";
+		getline(cin, title);
+		cout << "Год:";
+		cin >> year;
+		cout << "Цена:";
+		cin >> price;
+		cout << "---------------------------------------" << endl;
 	}
- void show()//вывод
+	void show()//вывод
 	{
- cout << "Жанр:" << style << endl;
- cout << "Автор:" << author << endl;
- cout << "Название:" << title << endl;
- cout << "Год:" << year << endl;
- cout << "Цена:" << price << endl;
+		cout << "Жанр:" << style << endl;
+		cout << "Автор:" << author << endl;
+		cout << "Название:" << title << endl;
+		cout << "Год:" << year << endl;
+		cout << "Цена:" << price << endl;
 	}
 };
 
 int main()
 {
- SetConsoleCP (1251);
- SetConsoleOutputCP(1251);
- setlocale (LC_ALL, " Rus");
- книга x;
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	setlocale(LC_ALL, "Rus");
+	book x;
 
 	x.set();
 	x.show();
