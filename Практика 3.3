@@ -1,0 +1,59 @@
+#включить "pch.ч"
+#include <iostream>
+#include <string>
+#include " windows.ч"
+#include <cstdio>
+использование пространства имен std;
+
+class car { //Объявляемсам класс
+общественный:
+ string mark;//Объявляем переменные
+ строковый тип;
+ сила строки;
+ струнная модель;
+ int год;
+ int цена;
+
+ void set()//Производим ввод
+	{
+ cout << "Тип кузова:";
+ getline (cin, тип);
+ cout << "Марка:";
+ getline (cin, mark);
+ cout << "Название модели:";
+ getline (cin, модель);
+ cout << "Год выпуска:";
+ Cin >>> год;
+ cout << "Мощность:";
+ cin > > > мощность;
+ cout << "Цена:";
+ cin > > > цена;
+ cout << "---------------------------------------" <;
+	}
+ void show()//вывод
+	{
+ cout << "Тип кузова:" << type << endl;
+ cout << "Год выпуска:" << year << endl;
+ cout << "Марка:" << mark << endl;
+ cout << "Название модели:" << model << endl;
+ cout << "Мощность:" << power << endl;
+ cout << "Цена:" << price << endl;
+	}
+
+
+};
+
+
+int main()
+{
+ SetConsoleCP (1251);
+ SetConsoleOutputCP(1251);
+ setlocale (LC_ALL, " Rus");
+ автомобиль x;
+
+ x.набор();
+ x.показать();
+
+ система ("пауза");
+ возврат 0;
+}
