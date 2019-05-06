@@ -1,25 +1,25 @@
-#включить "pch.ч"
+#include "pch.h"
 #include <iostream>
-#включить ч>
-использование пространства имен std;
+#include <windows.h>
+using namespace std;
 int main()
 {
- SetConsoleCP (1251);
+ SetConsoleCP(1251);
  SetConsoleOutputCP(1251); //корректный вывод русского языка
  double a, b; //объявляем переменные
  cout << "Введите первое число: ";
- cin >>> a;
+ cin >> a;
  cout << "Введите второе число: ";
- cin >>> b;
+ cin >> b;
 	
 double c = a + b; //сами вычисления
- двойной x = a - b;
- двойной p = a * b;
- двойной r = a / b;
+ double x = a - b;
+ double p = a * b;
+ double r = a / b;
 
  cout << "Сумма чисел = " << c << endl; //результаты
  cout << "Разность чисел = " << x << endl;
  cout << "Произведение чисел = " << p << endl;
  cout << "Частное чисел = " << r << endl;
- возврат 0;
+ return 0;
 }
