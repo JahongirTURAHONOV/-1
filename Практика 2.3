@@ -1,28 +1,28 @@
-#включить "pch.ч"
-#включить ч>
+#include "pch.h"
+#include <Windows.h>
 #include <iostream>
 #include <cmath>
-использование пространства имен std;
+using namespace std;
 
 int main()
 {
- SetConsoleCP (1251);
- SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 
- двойной a, b, t, y;
- cout << "Введите числа a и b" << endl;
- cin >>> a >>>>>>> b;
- если (a )
- y = (a - b) / (a + b)*(a + b) / (a*a-a * b + b * b);
- еще если (a > b)
- y = a + log(b*b);
- если (y = = b)
- t = (2 * y + sqrt(y * y-a) / (2 * b-sqrt (a*a-y)));
- else if (y )
- t = pow (sin (y), 2) + 1 / tan (a - b);
- еще
- t = pow (y * sin (a), 1.0 / 3) + 1 / sqrt(y * cos(b)));
- cout < < "t =" < < t < < endl < < "y =" < < y <;
- система ("пауза");
- возврат 0;
+	double a, b, t, y;
+	cout << "Введите числа a и b" << endl;
+	cin >> a >> b;
+	if (a <= b)
+		y = (a - b) / (a + b)*(a + b) / (a*a - a * b + b * b);
+	else if (a > b)
+		y = a + log(b*b);
+	if (y == b)
+		t = (2 * y + sqrt(y*y - a) / (2 * b - sqrt(a*a - y)));
+	else if (y < b)
+		t = pow(sin(y), 2) + 1 / tan(a - b);
+	else
+		t = pow(y*sin(a), 1.0 / 3) + 1 / sqrt(y*cos(b));
+	cout << "t = " << t << endl << "y = " << y << endl;
+	system("pause");
+	return 0;
 }
