@@ -1,31 +1,30 @@
-
-#включить "pch.
+#include "pch.h"
 #include <iostream>
 #include <cmath>
-#включить ч>
+#include <windows.h>
 
-использование пространства имен std;
+using namespace std;
 
 int main()
 {
-SetConsoleCP (1251);
+SetConsoleCP(1251);
  SetConsoleOutputCP(1251);
 
- двойной a, b, n, m;
+ double a, b, n, m;
  cout << "Введите числа a и b" << endl;
  cin >> a >> b;//считывание исходных данных
- если (a >= b)
+ if (a >= b)
  n = pow(a - b, (1.0 / 3)); //возведение в степень
- остальное если (a )
- n = a * a + (a - b) / sin(a * b);
- if (n )
- m = (n + a) / - b + pow ((sin(a)*sin (a) - cos (n)), 1.0 / 2);
- еще если (n == b)
- m = b * b + tan(n * a);
- еще
- m = pow (b, 3) + n * a*a;
- cout < < "m =" < < m < < endl < < "n =" < < n <;
- система ("пауза");
- возврат 0;
+ else if (a < b)
+ n = a * a + (a - b) / sin(a*b);
+ if (n < b)
+ m = (n + a) / -b + pow((sin(a)*sin(a) - cos(n)), 1.0 / 2);
+ else if (n == b)
+ m = b * b + tan(n*a);
+ else
+ m = pow(b, 3) + n * a*a;
+ cout << "m = " << m << endl << "n = " << n << endl;
+ system("pause");
+ return 0;
 
 }
