@@ -1,0 +1,52 @@
+#включить "pch.ч"
+#include <iostream>
+#include <string>
+#include " windows.ч"
+#include <cstdio>
+использование пространства имен std;
+
+class book { //Объявляемсам класс
+общественный:
+ string style;//Объявляем переменные
+ автор строки;
+ заголовок строки;
+ int год;
+ int цена;
+
+ void set () / / ввод
+	{
+ cout << "Какой жанр?
+ getline (Cin, style);
+ cout << "Имя и фамилия автора:";
+ getline (cin, автор);
+ cout << "Название:";
+ getline (cin, title);
+ cout << "Год:";
+ Cin >>> год;
+ cout << "Цена:";
+ cin > > > цена;
+ cout << "---------------------------------------" <;
+	}
+ void show()//вывод
+	{
+ cout << "Жанр:" << style << endl;
+ cout << "Автор:" << author << endl;
+ cout << "Название:" << title << endl;
+ cout << "Год:" << year << endl;
+ cout << "Цена:" << price << endl;
+	}
+};
+
+int main()
+{
+ SetConsoleCP (1251);
+ SetConsoleOutputCP(1251);
+ setlocale (LC_ALL, " Rus");
+ книга x;
+
+	x.set();
+	x.show();
+
+	system("pause");
+	return 0;
+}
