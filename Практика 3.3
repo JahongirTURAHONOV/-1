@@ -1,43 +1,43 @@
-#включить "pch.ч"
+#include "pch.h"
 #include <iostream>
 #include <string>
-#include " windows.ч"
+#include "windows.h"
 #include <cstdio>
-использование пространства имен std;
+using namespace std;
 
-class car { //Объявляемсам класс
-общественный:
- string mark;//Объявляем переменные
- строковый тип;
- сила строки;
- струнная модель;
- int год;
- int цена;
+class car { //Объявляемсам класс  
+public:
+	string mark;//Объявляем переменные 
+	string type;
+	string power;
+	string model;
+	int year;
+	int price;
 
- void set()//Производим ввод
+	void set()//Производим ввод
 	{
- cout << "Тип кузова:";
- getline (cin, тип);
- cout << "Марка:";
- getline (cin, mark);
- cout << "Название модели:";
- getline (cin, модель);
- cout << "Год выпуска:";
- Cin >>> год;
- cout << "Мощность:";
- cin > > > мощность;
- cout << "Цена:";
- cin > > > цена;
- cout << "---------------------------------------" <;
+		cout << "Тип кузова:";
+		getline(cin, type);
+		cout << "Марка:";
+		getline(cin, mark);
+		cout << "Название модели:";
+		getline(cin, model);
+		cout << "Год выпуска:";
+		cin >> year;
+		cout << "Мощность:";
+		cin >> power;
+		cout << "Цена:";
+		cin >> price;
+		cout << "---------------------------------------" << endl;
 	}
- void show()//вывод
+	void show()//вывод
 	{
- cout << "Тип кузова:" << type << endl;
- cout << "Год выпуска:" << year << endl;
- cout << "Марка:" << mark << endl;
- cout << "Название модели:" << model << endl;
- cout << "Мощность:" << power << endl;
- cout << "Цена:" << price << endl;
+		cout << "Тип кузова:" << type << endl;
+		cout << "Год выпуска:" << year << endl;
+		cout << "Марка:" << mark << endl;
+		cout << "Название модели:" << model << endl;
+		cout << "Мощность:" << power << endl;
+		cout << "Цена:" << price << endl;
 	}
 
 
@@ -46,14 +46,14 @@ class car { //Объявляемсам класс
 
 int main()
 {
- SetConsoleCP (1251);
- SetConsoleOutputCP(1251);
- setlocale (LC_ALL, " Rus");
- автомобиль x;
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	setlocale(LC_ALL, "Rus");
+	car x;
 
- x.набор();
- x.показать();
+	x.set();
+	x.show();
 
- система ("пауза");
- возврат 0;
+	system("pause");
+	return 0;
 }
