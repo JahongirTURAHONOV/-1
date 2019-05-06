@@ -1,0 +1,52 @@
+включить "pch.ч"
+#include <iostream>
+#include <string>
+#include " windows.ч"
+#include <cstdio>
+использование пространства имен std;
+
+class students { //Объявляемсам класс
+общественный:
+ string *members;//Объявляем переменные
+
+ int n;
+
+ void set () / / ввод
+	{
+ cout << "Количество студентов равно:" << endl;
+ cin >>> n;
+ members = новая строка[n];
+		
+ for (int i = 0; i )
+		{
+ cout << "ГруппА_ФИО_год рождеия" << i+1 << ":"<< endl;
+ cin > > > участники[i];
+
+		}
+	}
+ void show()//вывод
+	{
+ cout < < endl << "-----------------------------------------------------" <;
+ for (int i = 0; i )
+		{
+ cout <<"студент №"<< i+1 << ":" << members[i] << endl;
+
+		}
+
+	}
+};
+
+
+int main()
+{
+ SetConsoleCP (1251);
+ SetConsoleOutputCP(1251);
+ setlocale (LC_ALL, " Rus");
+ студенты x;
+
+ x.набор();
+ x.показать();
+
+ система ("пауза");
+ возврат 0;
+}
