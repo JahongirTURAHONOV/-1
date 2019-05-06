@@ -1,35 +1,35 @@
-включить "pch.ч"
+#include "pch.h"
 #include <iostream>
 #include <string>
-#include " windows.ч"
+#include "windows.h"
 #include <cstdio>
-использование пространства имен std;
+using namespace std;
 
-class students { //Объявляемсам класс
-общественный:
- string *members;//Объявляем переменные
+class students { //Объявляемсам класс 
+public:
+	string *members;//Объявляем переменные  
 
- int n;
+	int n;
 
- void set () / / ввод
+	void set()//ввод
 	{
- cout << "Количество студентов равно:" << endl;
- cin >>> n;
- members = новая строка[n];
+		cout << "Количество студентов равно:" << endl;
+		cin >> n;
+		members = new string[n];
 		
- for (int i = 0; i )
+		for (int i = 0; i < n; i++) 
 		{
- cout << "ГруппА_ФИО_год рождеия" << i+1 << ":"<< endl;
- cin > > > участники[i];
+			cout << "ГруппА_ФИО_год рождеия" << i+1 << ":"<< endl;
+			cin >> members[i];
 
 		}
 	}
- void show()//вывод
+	void show()//вывод
 	{
- cout < < endl << "-----------------------------------------------------" <;
- for (int i = 0; i )
+		cout << endl << "-----------------------------------------------------" << endl;
+		for (int i = 0; i < n; i++)
 		{
- cout <<"студент №"<< i+1 << ":" << members[i] << endl;
+			cout <<"студент №"<< i+1 << ":" << members[i] << endl;
 
 		}
 
@@ -39,14 +39,14 @@ class students { //Объявляемсам класс
 
 int main()
 {
- SetConsoleCP (1251);
- SetConsoleOutputCP(1251);
- setlocale (LC_ALL, " Rus");
- студенты x;
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	setlocale(LC_ALL, "Rus");
+	students x;
 
- x.набор();
- x.показать();
+	x.set();
+	x.show();
 
- система ("пауза");
- возврат 0;
+	system("pause");
+	return 0;
 }
