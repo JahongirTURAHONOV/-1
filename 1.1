@@ -1,18 +1,18 @@
-#включить "pch.ч"
+#include "pch.h"
 #include<iostream>
 #include <string>
-#включить ч>
+#include <windows.h>
 
-использование пространства имен std;
+using namespace std;
 
 int main()
 {
-SetConsoleCP (1251);
+SetConsoleCP(1251);
 SetConsoleOutputCP(1251); //корректный вывод русского языка
 
 cout << "Введите имя:";
-строковое имя;
-cin >>> имя;
+string name;
+cin >> name;
 cout << "Здравствуйте, " << name << endl;
-система ("пауза");
-возврат 0;
+system("pause");
+return 0;
