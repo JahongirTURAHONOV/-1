@@ -1,0 +1,59 @@
+#include "pch.h"
+#include <iostream>
+#include <string>
+#include "windows.h"
+#include <cstdio>
+using namespace std;
+
+class vector { //Объявляемсам класс
+общественный:
+ двойная ось;
+ двойной ay;
+ двойной bx;
+ double by;
+ двойная сума1;
+ двойной сум2;
+ двойной dif1;
+ двойной dif2;
+ void set () / / ввод
+	{
+ cout << "Введите координаты x вектора а:";
+ Cin >>> ax;
+ cout << "Введите координаты y вектора а:";
+ cin >>> ay;
+ cout << "Введите координаты x вектора b:";
+ cin >>> bx;
+ cout << "Введите координаты y вектора b:";
+ cin > > > by;
+ sum1 = ax + bx;
+ sum2 = ay + by;
+ dif1 = ax - bx;
+ dif2 = ay-by;
+
+	}
+ void show()//вывод
+	{
+ cout << "Вектор а=(" << ax << ";" << ay << ")"<< endl;
+ cout << "Вектор b=(" << bx << ";" << by << ")" << endl;
+ cout << "Сумма векторов а+b=(" << sum1 << ";" << sum2<< ")" << endl;
+ cout << "Разность векторов а-b=(" << dif1 << ";" << dif2 << ")" << endl;
+
+	}
+
+
+};
+
+
+int main()
+{
+ SetConsoleCP (1251);
+ SetConsoleOutputCP(1251);
+ setlocale (LC_ALL, " Rus");
+ вектор x;
+
+ x.набор();
+ x.показать();
+
+ система ("пауза");
+ возврат 0;
+}
